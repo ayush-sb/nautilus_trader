@@ -15,8 +15,8 @@
 
 import pytest
 
-from nautilus_trader.core.nautilus_pyo3 import PriceType
 from nautilus_trader.core.nautilus_pyo3 import ExponentialMovingAverage
+from nautilus_trader.core.nautilus_pyo3 import PriceType
 from nautilus_trader.test_kit.rust.data_pyo3 import TestDataProviderPyo3
 
 
@@ -81,7 +81,7 @@ def test_handle_quote_tick_updates_indicator():
 
     # Assert
     assert indicator.has_inputs
-    assert round(indicator.value,1) == 1987.5
+    assert round(indicator.value, 1) == 1987.5
 
 
 def test_handle_trade_tick_updates_indicator(ema: ExponentialMovingAverage):
